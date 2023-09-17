@@ -1,12 +1,15 @@
-const counter = document.querySelector("#counter > decrement");
-console.dir(counter);
+const buttonDecrement = document.querySelector("button[data-action=decrement]");
+const buttonIncrement = document.querySelector("button[data-action=increment]");
+const spanItem = document.querySelector("#value");
 
-const decrement = counter.getAttribute("counter decrement");
-console.dir(decrement);
+buttonDecrement.addEventListener("click", minusNumber);
+buttonIncrement.addEventListener("click", plusNumber);
 
-const handClick = () => {
-  console.log("hellllooo");
-};
-decrement.addEventListener("click", handClick);
-const counterValue = document.querySelector("#value");
-console.log(counterValue);
+function minusNumber() {
+  const currentValue = Number(spanItem.textContent);
+  spanItem.textContent = currentValue + Number(buttonDecrement.textContent);
+}
+function plusNumber() {
+  const currentValue = Number(spanItem.textContent);
+  spanItem.textContent = currentValue + Number(buttonIncrement.textContent);
+}
