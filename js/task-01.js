@@ -2,8 +2,8 @@ const liCategory = document.querySelectorAll("#categories .item");
 console.log("Number of categories: ", liCategory.length);
 
 liCategory.forEach((item) => {
-  const categoryName = item.querySelector("h2").textContent;
+  const categoryName = item.firstElementChild.textContent;
   console.log("Category:", categoryName);
-  const numberOfElement = item.querySelectorAll("li").length;
+  const numberOfElement = item.lastElementChild.children.length;
   console.log("Elements:", numberOfElement);
 });
