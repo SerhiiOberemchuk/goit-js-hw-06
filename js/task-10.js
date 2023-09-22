@@ -12,7 +12,6 @@ inputFild.addEventListener("input", getInputNumber);
 function getInputNumber(event) {
   amount = Number(event.currentTarget.value);
 }
-
 // --- Create boxes ---
 const buttonCreate = controlBox.querySelector("[data-create]");
 buttonCreate.addEventListener("click", createBoxes);
