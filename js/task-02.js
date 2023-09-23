@@ -8,9 +8,7 @@ const ingredients = [
 ];
 
 const listIngredients = document.querySelector("#ingredients");
-ingredients.forEach((iterator) => {
-  const ingredient = document.createElement("li");
-  ingredient.textContent = iterator;
-  ingredient.className = "item";
-  listIngredients.append(ingredient);
-});
+const markap = ingredients
+  .map((ingredient) => `<li>${ingredient}</li>`)
+  .join("");
+listIngredients.innerHTML += markap;
