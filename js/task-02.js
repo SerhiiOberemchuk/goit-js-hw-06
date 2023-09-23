@@ -14,5 +14,7 @@ const markap = ingredients.map((ingredient) => {
   item.textContent = ingredient;
   item.classList.add("item");
   console.log(item);
-  listIngredients.append(item);
+  return item;
 });
+
+listIngredients.append(...markap);
